@@ -1,0 +1,127 @@
+/* SSB UI Style */
+#ssb-container {
+    position: fixed;
+    top: 30%
+}
+
+.ssb-btns-right {
+    right: 0;
+}
+
+.ssb-btns-left {
+    left: 0;
+}
+
+#ssb-container ul {
+    padding: 0;
+    margin: 0;
+}
+
+#ssb-container ul li {
+    list-style: none;
+    margin: 0;
+}
+
+#ssb-container ul.ssb-light-hover {
+    background: #ffffff;
+}
+
+#ssb-container ul.ssb-dark-hover {
+    background: #000000;
+}
+
+#ssb-container ul li {
+    line-height: 45px;
+}
+
+#ssb-container ul li p {
+    margin: 0;
+}
+
+#ssb-container ul li a {
+    padding: 0 15px 0 0;
+    display: block;
+    line-height: 45px;
+    text-align: left;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+#ssb-container ul li i {
+    line-height: 45px;
+    width: 50px;
+    text-align: center;
+}
+
+#ssb-container.ssb-btns-left ul li a {
+    text-align: right;
+    padding: 0 0 0 15px;
+}
+
+#ssb-container.ssb-btns-left ul li i {
+    float: right;
+}
+
+#ssb-container ul li a:hover {
+    text-decoration: none;
+}
+
+#ssb-container .ssb-share-btn {
+    position: relative;
+}
+
+#ssb-container .ssb-share-btn i,
+#ssb-container.ssb-btns-left .ssb-share-btn i {
+    float: none;
+}
+
+#ssb-container .ssb-share-btn a {
+    padding: 0;
+}
+
+#ssb-container.ssb-btns-left .ssb-share-btn i.ssb-share-icon {
+    float: right !important;
+}
+
+#ssb-container.ssb-anim-icons ul li {
+    transition: transform 100ms;
+}
+
+#ssb-container.ssb-anim-icons.ssb-btns-right ul li:hover {
+    transform: translate(-15px, 0);
+}
+
+#ssb-container.ssb-anim-icons.ssb-btns-left ul li:hover {
+    transform: translate(15px, 0);
+}
+
+#ssb-container ul li.ssb-share-btn:hover .ssb-social-popup {
+    display: block;
+}
+
+.ssb-social-popup {
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    margin: 0 0 0 -50px;
+    width: 155px;
+    display: none;
+}
+
+#ssb-container.ssb-btns-right .ssb-social-popup {
+    right: -100%;
+    margin: 0 0 0 -110px;
+    left: 0;
+}
+
+#ssb-container .ssb-social-popup a {
+    padding: 0 !important;
+    text-align: left !important;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .ssb-disable-on-mobile {
+        display: none;
+    }
+}
