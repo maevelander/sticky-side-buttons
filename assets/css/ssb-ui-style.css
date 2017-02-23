@@ -22,14 +22,6 @@
     margin: 0;
 }
 
-#ssb-container ul.ssb-light-hover {
-    background: #ffffff;
-}
-
-#ssb-container ul.ssb-dark-hover {
-    background: #000000;
-}
-
 #ssb-container ul li {
     line-height: 45px;
 }
