@@ -1,7 +1,8 @@
 /* SSB UI Style */
 #ssb-container {
     position: fixed;
-    top: 30%
+    top: 30%;
+	z-index: 1;
 }
 
 .ssb-btns-right {

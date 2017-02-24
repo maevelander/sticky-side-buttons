@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Sticky Side Buttons
-Version: 1.0
+Version: 1.0.1
 Plugin URI: http://enigmaplugins.com.au/
 Description: Flexible button creator allowing you to stick floating buttons to the side of your site.
 Author: Enigma Plugins

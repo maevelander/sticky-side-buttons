@@ -56,11 +56,15 @@ None yet.
 
 = 1.0.1 =
 * Removed unnecessary css background - works better when buttons are spaced
+* Added z-index so buttons don't hide behind things (fix for revolution slider)
 
 = 1.0 =
 * Initial release
 
 == Upgrade Notice ==
+
+= 1.0.1 =
+* Minor update with some css tweaks
 
 = 1.0 =
 * Initial release
