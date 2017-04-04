@@ -6,6 +6,8 @@ jQuery(function ($) {
         ssb_panel_w = ssb_panel.width(),
         sbb_display_margin = 50;
 
+    ssb_panel.css('z-index', ssb_ui_data.z_index);
+
     if (ssb_panel.hasClass('ssb-btns-left') && (ssb_panel.hasClass('ssb-anim-slide') || ssb_panel.hasClass('ssb-anim-icons'))) {
 
         ssb_panel.css('left', '-' + (ssb_panel_w - sbb_display_margin) + 'px');
