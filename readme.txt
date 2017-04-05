@@ -39,7 +39,17 @@ This simple button creator lets you create one or more floating buttons that sti
 
 == Frequently Asked Questions ==
 
-None yet.
+= My sticky side buttons are covered by some other element. What should I do? =
+
+In the plugin settings there is a field where you can define z-index for the buttons. An element with a higher z-index is always in front of an element with a lower z-index.
+
+= Where can I get support for this plugin? =
+
+If you've tried all the obvious stuff and it's still not working please request support via the forum. Remember to include a link to your site, and a full description of the issue plus the steps you've already taken to try to solve it.
+
+= Can I contribute to this plugin? =
+
+Absolutely! Please create a pull request on [GitHub here.](https://github.com/EnigmaWeb/sticky-side-buttons)
 
 
 == Screenshots ==
@@ -54,6 +64,9 @@ None yet.
 
 == Changelog ==
 
+= 1.0.2 =
+* Adds a setting so user can define custom z-index
+
 = 1.0.1 =
 * Removed unnecessary css background - works better when buttons are spaced
 * Added z-index so buttons don't hide behind things (fix for revolution slider)
@@ -62,6 +75,9 @@ None yet.
 * Initial release
 
 == Upgrade Notice ==
+
+= 1.0.2 =
+* Adds a setting so user can define custom z-index. Thanks to AlexGStapleton.
 
 = 1.0.1 =
 * Minor update with some css tweaks
