@@ -187,6 +187,10 @@ class ssb_main {
 		wp_enqueue_script('jquery-effects-shake');
 		wp_enqueue_script('ssb-ui-js', plugins_url('assets/js/ssb-ui-js.js', __FILE__));
 
+		$btn_z_index = isset( $this->settings['btn_z_index'] ) ? $this->settings['btn_z_index'] : 1;
+		wp_localize_script( 'ssb-ui-js', 'ssb_ui_data', array(
+			'z_index' => intval( $btn_z_index )
+		));
 	}
 
 

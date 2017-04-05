@@ -304,6 +304,20 @@ class ssb_ui {
 					</div>
 				</div>
 
+				<div class="ssb-row">
+					<div class="ssb-col">
+						<label for="ssb-btn-z-index">
+							<strong><?php _e( 'z-index', 'sticky-side-buttons' ); ?>:</strong>
+						</label>
+					</div>
+					<div class="ssb-col">
+						<input type="number"
+							   name="ssb_settings[btn_z_index]"
+							   id="ssb-btn-z-index" class="small-text"
+							   value="<?php echo isset( $this->settings['btn_z_index'] ) ? intval( $this->settings['btn_z_index'] ) : 1 ?>">
+
+					</div>
+				</div>
 
 			</div>
 			<footer class="ssb-panel-footer">
