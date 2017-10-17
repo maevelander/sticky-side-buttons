@@ -3,7 +3,7 @@ Contributors: EnigmaWeb
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CEJ9HFWJ94BG4
 Tags: sticky, buttons, contact, side, social buttons, email button, phone button, floating
 Requires at least: 2.7
-Tested up to: 4.7.2
+Tested up to: 4.8
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -64,6 +64,9 @@ Absolutely! Please create a pull request on [GitHub here.](https://github.com/En
 
 == Changelog ==
 
+= 1.0.3 =
+* Fixes z-index override issue
+
 = 1.0.2 =
 * Adds a setting so user can define custom z-index
 
@@ -75,6 +78,9 @@ Absolutely! Please create a pull request on [GitHub here.](https://github.com/En
 * Initial release
 
 == Upgrade Notice ==
+
+= 1.0.3 =
+* Fixes z-index override issue
 
 = 1.0.2 =
 * Adds a setting so user can define custom z-index. Thanks to AlexGStapleton.
