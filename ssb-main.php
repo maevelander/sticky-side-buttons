@@ -20,6 +20,9 @@ class ssb_main {
 
 		// User interfaces object
 		$this->ui = new ssb_ui;
+		
+		// Pull stored data
+		$this->settings = get_option( 'ssb_settings' );
 
 		// Plugin text domain
 		add_action( 'init', array( $this, 'ssb_textdomain' ) );
