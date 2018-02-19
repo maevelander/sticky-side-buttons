@@ -138,6 +138,16 @@ class ssb_ui {
                                                    name="ssb_buttons[btns][<?php echo $btn_id; ?>][btn_font_color]"
                                                    value="<?php echo $this->buttons['btns'][ $btn_id ]['btn_font_color']; ?>">
                                         </p>
+                                        <p>
+                                            <label for="button-opening-<?php echo $btn_id; ?>"
+                                                   style="text-transform: inherit">Open link in a new window</label>
+                                            <input type="checkbox"
+                                                   id="button-opening-<?php echo $btn_id; ?>"
+                                                   class="open-new-window"
+                                                   name="ssb_buttons[btns][<?php echo $btn_id; ?>][open_new_window]"
+                                                   value="1"
+												<?php echo ( isset( $this->buttons['btns'][ $btn_id ]['open_new_window'] ) && $this->buttons['btns'][ $btn_id ]['open_new_window'] == 1 ) ? ' checked="checked"' : ''; ?>>
+                                        </p>
                                     </div>
                                     <div class="ssb-btn-controls">
                                         <a href="#" class="ssb-remove-btn">Remove</a> |
@@ -381,7 +391,7 @@ class ssb_ui {
 		echo get_post_type();
 
 		// Show on
-		if ( ( $this->settings['show_on_pages'] && get_post_type() == 'page' && !is_front_page() ) ||
+		if ( ( $this->settings['show_on_pages'] && get_post_type() == 'page' && ! is_front_page() ) ||
 		     ( $this->settings['show_on_posts'] && ( get_post_type() == 'post' ) ) ||
 		     ( $this->settings['show_on_frontpage'] && is_front_page() ) ) {
 
@@ -402,7 +412,7 @@ class ssb_ui {
 							?>
                             <li id="ssb-btn-<?php echo $btn_id; ?>">
                                 <p>
-                                    <a href="<?php echo $this->buttons['btns'][ $btn_id ]['btn_link']; ?>"><?php
+                                    <a href="<?php echo $this->buttons['btns'][ $btn_id ]['btn_link']; ?>" <?php echo ($this->buttons['btns'][ $btn_id ]['open_new_window']) ? 'target="_blank"' : ''; ?>><?php
 										echo ( isset( $this->buttons['btns'][ $btn_id ]['btn_icon'] ) && $this->buttons['btns'][ $btn_id ]['btn_icon'] ) ? '<span class="fa ' . $this->buttons['btns'][ $btn_id ]['btn_icon'] . '"></span> ' : '';
 										echo ( isset( $this->buttons['btns'][ $btn_id ]['btn_text'] ) && ( isset( $this->settings['btn_anim'] ) && $this->settings['btn_anim'] != 'icons' ) ) ? $this->buttons['btns'][ $btn_id ]['btn_text'] : ' &nbsp; ';
 										?></a>
