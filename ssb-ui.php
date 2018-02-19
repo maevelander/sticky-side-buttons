@@ -414,7 +414,7 @@ class ssb_ui {
                                 <p>
                                     <a href="<?php echo $this->buttons['btns'][ $btn_id ]['btn_link']; ?>" <?php echo ($this->buttons['btns'][ $btn_id ]['open_new_window']) ? 'target="_blank"' : ''; ?>><?php
 										echo ( isset( $this->buttons['btns'][ $btn_id ]['btn_icon'] ) && $this->buttons['btns'][ $btn_id ]['btn_icon'] ) ? '<span class="fa ' . $this->buttons['btns'][ $btn_id ]['btn_icon'] . '"></span> ' : '';
-										echo ( isset( $this->buttons['btns'][ $btn_id ]['btn_text'] ) && ( isset( $this->settings['btn_anim'] ) && $this->settings['btn_anim'] != 'icons' ) ) ? $this->buttons['btns'][ $btn_id ]['btn_text'] : ' &nbsp; ';
+										echo ( isset( $this->buttons['btns'][ $btn_id ]['btn_text'] ) && ( isset( $this->settings['btn_anim'] ) && $this->settings['btn_anim'] != 'icons' ) ) ? __( $this->buttons['btns'][ $btn_id ]['btn_text'], 'sticky-side-buttons' ) : ' &nbsp; ';
 										?></a>
                                 </p>
                             </li>
