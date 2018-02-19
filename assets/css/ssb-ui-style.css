@@ -40,10 +40,11 @@
     text-decoration: none;
 }
 
-#ssb-container ul li i {
+#ssb-container ul li span {
     line-height: 45px;
     width: 50px;
     text-align: center;
+    display: inline-block;
 }
 
 #ssb-container.ssb-btns-left ul li a {
@@ -51,7 +52,7 @@
     padding: 0 0 0 15px;
 }
 
-#ssb-container.ssb-btns-left ul li i {
+#ssb-container.ssb-btns-left ul li span {
     float: right;
 }
 
@@ -63,8 +64,8 @@
     position: relative;
 }
 
-#ssb-container .ssb-share-btn i,
-#ssb-container.ssb-btns-left .ssb-share-btn i {
+#ssb-container .ssb-share-btn span,
+#ssb-container.ssb-btns-left .ssb-share-btn span {
     float: none;
 }
 
