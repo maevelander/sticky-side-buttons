@@ -179,6 +179,7 @@ class ssb_ui {
 	 */
 	public
 	function general_settings() {
+	    echo '<pre>' , print_r($this->settings) , '</pre>';
 		?>
         <div class="ssb-panel">
 			<?php settings_fields( 'ssb_storage' ); ?>

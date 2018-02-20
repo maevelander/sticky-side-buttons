@@ -20,7 +20,7 @@ class ssb_main {
 
 		// User interfaces object
 		$this->ui = new ssb_ui;
-		
+
 		// Pull stored data
 		$this->settings = get_option( 'ssb_settings' );
 
@@ -46,6 +46,7 @@ class ssb_main {
 
 
 	}
+
 
 
 	/**
