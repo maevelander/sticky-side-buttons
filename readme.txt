@@ -3,7 +3,7 @@ Contributors: EnigmaWeb
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CEJ9HFWJ94BG4
 Tags: sticky, buttons, contact, side, social buttons, email button, phone button, floating
 Requires at least: 2.7
-Tested up to: 4.8
+Tested up to: 5.0
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -26,6 +26,7 @@ This simple button creator lets you create one or more floating buttons that sti
 * Animation style > none, slide or icons only
 * Disable on mobile (optional)
 * Customise button icons, text, link, and colors easily
+* Show on: Front Page, Pages, Posts (checkboxes)
 
 = Demo =
 
@@ -64,6 +65,14 @@ Absolutely! Please create a pull request on [GitHub here.](https://github.com/En
 
 == Changelog ==
 
+= 1.0.4 =
+* Adds option to open link in new window
+* Adds a 'show on' option: Pages, Posts, Front Page
+* Minor bug fix for accessibility
+* Adds support for translation plugins: WPML, Polylang
+* Improved button hover handling on mobile
+
+
 = 1.0.3 =
 * Fixes z-index override issue
 
@@ -78,6 +87,13 @@ Absolutely! Please create a pull request on [GitHub here.](https://github.com/En
 * Initial release
 
 == Upgrade Notice ==
+
+= 1.0.4 =
+* Adds option to open link in new window
+* Adds a 'show on' option: Pages, Posts, Front Page
+* Minor bug fix for accessibility
+* Adds support for translation plugins: WPML, Polylang
+* Improved button hover handling on mobile
 
 = 1.0.3 =
 * Fixes z-index override issue
