@@ -19,6 +19,28 @@ require_once 'ssb-ui.php';
 
 
 /**
+ * Plugin Activation
+ */
+function ssb_activate() {
+
+	$ssb_options = get_option( 'ssb_settings' );
+
+	$default_options = array(
+		'show_on_frontpage' => 1,
+		'show_on_posts' => 1,
+		'show_on_pages' => 1
+	);
+
+	$new_settings = array_merge($ssb_options, $default_options);
+
+	update_option( 'ssb_settings', $new_settings );
+
+}
+
+register_activation_hook( __FILE__, 'ssb_activate' );
+
+
+/**
  * SSB Instance
  */
 $ssb = new ssb_main;
