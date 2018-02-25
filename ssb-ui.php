@@ -388,8 +388,6 @@ class ssb_ui {
 	 */
 	public function icons() {
 
-		echo get_post_type();
-
 		// Show on
 		if ( ( $this->settings['show_on_pages'] && get_post_type() == 'page' && ! is_front_page() ) ||
 		     ( $this->settings['show_on_posts'] && ( get_post_type() == 'post' ) ) ||
