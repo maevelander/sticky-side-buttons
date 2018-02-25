@@ -65,6 +65,9 @@ Absolutely! Please create a pull request on [GitHub here.](https://github.com/En
 
 == Changelog ==
 
+= 1.0.5 =
+* Bug fix: "page" text in footer
+
 = 1.0.4 =
 * Adds option to open link in new window
 * Adds a 'show on' option: Pages, Posts, Front Page
@@ -87,6 +90,9 @@ Absolutely! Please create a pull request on [GitHub here.](https://github.com/En
 * Initial release
 
 == Upgrade Notice ==
+
+= 1.0.5 =
+* Bug fix: "page" text in footer
 
 = 1.0.4 =
 * Adds option to open link in new window
