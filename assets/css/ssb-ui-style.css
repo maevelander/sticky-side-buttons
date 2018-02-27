@@ -116,5 +116,6 @@
 /* Responsive */
 @media (max-width: 640px) {
     .ssb-disable-on-mobile {
+        display: none;
     }
 }
