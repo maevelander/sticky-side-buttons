@@ -35,6 +35,18 @@ function ssb_activate() {
 
 	update_option( 'ssb_settings', $new_settings );
 
+	/** @var  $default_options_showoncpt intializing empty array */
+	$default_options_showoncpt = array();
+	/** @var  $registered_cpts getting registered CPTs */
+	$registered_cpts = get_post_types(array('_builtin' => false), 'objects');
+	foreach ($registered_cpts as $registered_cpt){
+
+		$default_options_showoncpt[] = $registered_cpt->name;
+
+	}
+
+	update_option('ssb_showoncpt', $default_options_showoncpt);
+
 }
 
 register_activation_hook( __FILE__, 'ssb_activate' );
