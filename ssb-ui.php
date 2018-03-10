@@ -15,6 +15,8 @@ class ssb_ui {
 	public $buttons;
 	public $settings;
 	public $btns_order;
+	public $cpts;
+	public $showoncpt;
 
 	/**
 	 * Dump everything for this class here
@@ -26,6 +28,7 @@ class ssb_ui {
 		// Pull stored data
 		$this->buttons  = get_option( 'ssb_buttons' );
 		$this->settings = get_option( 'ssb_settings' );
+		$this->showoncpt = get_option( 'ssb_showoncpt' );
 
 		// Buttons Sorting
 		$this->btns_order = explode( '&', str_replace( 'sort=', '', $this->buttons['btns_order'] ) );
@@ -356,6 +359,20 @@ class ssb_ui {
 								<?php _e( 'Posts', 'sticky-side-buttons' ); ?>
                             </label>
                         </p>
+	                    <?php $this->cpts = get_post_types( array( '_builtin' => false ), 'objects' );
+	                    if ( $this->cpts ):
+		                    foreach ( $this->cpts as $cpt ): ?>
+                                <p>
+                                    <label for="show-on-<?php echo $cpt->name; ?>">
+                                        <input type="checkbox"
+                                               name="ssb_showoncpt[]"
+                                               id="show-on-<?php echo $cpt->name; ?>"
+                                               value="<?php echo $cpt->name; ?>"
+						                    <?php echo ( in_array( $cpt->name, $this->showoncpt ) ) ? ' checked="checked"' : ''; ?>>
+					                    <?php _e( $cpt->labels->name, 'sticky-side-buttons' ); ?>
+                                    </label>
+                                </p>
+		                    <?php endforeach; endif; ?>
                         <p>
                             <label for="show-on-frontpage">
                                 <input type="checkbox"
@@ -391,7 +408,7 @@ class ssb_ui {
 		// Show on
 		if ( ( $this->settings['show_on_pages'] && get_post_type() == 'page' && ! is_front_page() ) ||
 		     ( $this->settings['show_on_posts'] && ( get_post_type() == 'post' ) ) ||
-		     ( $this->settings['show_on_frontpage'] && is_front_page() ) ) {
+		     ( $this->settings['show_on_frontpage'] && is_front_page() ) || (in_array(get_post_type(), $this->showoncpt))) {
 
 			// Buttons exists
 			if ( isset( $this->buttons['btns'] ) ) {

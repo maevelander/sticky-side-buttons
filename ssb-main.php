@@ -70,6 +70,7 @@ class ssb_main {
 
 		register_setting( 'ssb_storage', 'ssb_settings' );
 		register_setting( 'ssb_storage', 'ssb_buttons' );
+		register_setting('ssb_storage', 'ssb_showoncpt');
 
 	}
 
