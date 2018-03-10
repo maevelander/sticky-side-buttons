@@ -26,7 +26,7 @@ This simple button creator lets you create one or more floating buttons that sti
 * Animation style > none, slide or icons only
 * Disable on mobile (optional)
 * Customise button icons, text, link, and colors easily
-* Show on: Front Page, Pages, Posts (checkboxes)
+* Show on: Front Page, Pages, Posts, Custom Post Types (checkboxes)
 
 = Demo =
 
@@ -65,6 +65,9 @@ Absolutely! Please create a pull request on [GitHub here.](https://github.com/En
 
 == Changelog ==
 
+= 1.0.6 =
+* Support added for custom post types
+
 = 1.0.5 =
 * Bug fix: "page" text in footer
 
@@ -90,6 +93,9 @@ Absolutely! Please create a pull request on [GitHub here.](https://github.com/En
 * Initial release
 
 == Upgrade Notice ==
+
+= 1.0.6 =
+* Support added for custom post types
 
 = 1.0.5 =
 * Bug fix: "page" text in footer
