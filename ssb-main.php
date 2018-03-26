@@ -158,7 +158,7 @@ class ssb_main {
 
 		$dynamic_css = null;
 
-		if ($this->ui->buttons['btns']) {
+		if (!empty($this->ui->buttons['btns']) && $this->ui->buttons['btns']) {
 
 			foreach ( $this->ui->btns_order AS $btn_key => $btn_id ) {
 

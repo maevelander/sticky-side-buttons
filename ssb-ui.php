@@ -26,8 +26,8 @@ class ssb_ui {
 	public function __construct() {
 
 		// Pull stored data
-		$this->buttons  = get_option( 'ssb_buttons' );
-		$this->settings = get_option( 'ssb_settings' );
+		$this->buttons   = get_option( 'ssb_buttons' );
+		$this->settings  = get_option( 'ssb_settings' );
 		$this->showoncpt = get_option( 'ssb_showoncpt' );
 
 		// Buttons Sorting
@@ -359,20 +359,20 @@ class ssb_ui {
 								<?php _e( 'Posts', 'sticky-side-buttons' ); ?>
                             </label>
                         </p>
-	                    <?php $this->cpts = get_post_types( array( '_builtin' => false ), 'objects' );
-	                    if ( $this->cpts ):
-		                    foreach ( $this->cpts as $cpt ): ?>
+						<?php $this->cpts = get_post_types( array( '_builtin' => false ), 'objects' );
+						if ( $this->cpts ):
+							foreach ( $this->cpts as $cpt ): ?>
                                 <p>
                                     <label for="show-on-<?php echo $cpt->name; ?>">
                                         <input type="checkbox"
                                                name="ssb_showoncpt[]"
                                                id="show-on-<?php echo $cpt->name; ?>"
                                                value="<?php echo $cpt->name; ?>"
-						                    <?php echo ( in_array( $cpt->name, $this->showoncpt ) ) ? ' checked="checked"' : ''; ?>>
-					                    <?php _e( $cpt->labels->name, 'sticky-side-buttons' ); ?>
+											<?php echo ( in_array( $cpt->name, $this->showoncpt ) ) ? ' checked="checked"' : ''; ?>>
+										<?php _e( $cpt->labels->name, 'sticky-side-buttons' ); ?>
                                     </label>
                                 </p>
-		                    <?php endforeach; endif; ?>
+							<?php endforeach; endif; ?>
                         <p>
                             <label for="show-on-frontpage">
                                 <input type="checkbox"
@@ -406,9 +406,9 @@ class ssb_ui {
 	public function icons() {
 
 		// Show on
-		if ( ( $this->settings['show_on_pages'] && get_post_type() == 'page' && ! is_front_page() ) ||
-		     ( $this->settings['show_on_posts'] && ( get_post_type() == 'post' ) ) ||
-		     ( $this->settings['show_on_frontpage'] && is_front_page() ) || (in_array(get_post_type(), $this->showoncpt))) {
+		if ( ( isset( $this->settings['show_on_pages']) && $this->settings['show_on_pages'] && get_post_type() == 'page' && ! is_front_page() ) ||
+		     ( isset($this->settings['show_on_posts']) && $this->settings['show_on_posts'] && ( get_post_type() == 'post' ) ) ||
+		     ( isset($this->settings['show_on_frontpage']) && $this->settings['show_on_frontpage'] && is_front_page() ) || (!empty($this->showoncpt) && in_array( get_post_type(), $this->showoncpt ) ) ) {
 
 			// Buttons exists
 			if ( isset( $this->buttons['btns'] ) ) {
@@ -427,7 +427,7 @@ class ssb_ui {
 							?>
                             <li id="ssb-btn-<?php echo $btn_id; ?>">
                                 <p>
-                                    <a href="<?php echo $this->buttons['btns'][ $btn_id ]['btn_link']; ?>" <?php echo ($this->buttons['btns'][ $btn_id ]['open_new_window']) ? 'target="_blank"' : ''; ?>><?php
+                                    <a href="<?php echo $this->buttons['btns'][ $btn_id ]['btn_link']; ?>" <?php echo ( !empty($this->buttons['btns'][ $btn_id ]['open_new_window']) ) ? 'target="_blank"' : ''; ?>><?php
 										echo ( isset( $this->buttons['btns'][ $btn_id ]['btn_icon'] ) && $this->buttons['btns'][ $btn_id ]['btn_icon'] ) ? '<span class="fa ' . $this->buttons['btns'][ $btn_id ]['btn_icon'] . '"></span> ' : '';
 										echo ( isset( $this->buttons['btns'][ $btn_id ]['btn_text'] ) && ( isset( $this->settings['btn_anim'] ) && $this->settings['btn_anim'] != 'icons' ) ) ? __( $this->buttons['btns'][ $btn_id ]['btn_text'], 'sticky-side-buttons' ) : ' &nbsp; ';
 										?></a>
