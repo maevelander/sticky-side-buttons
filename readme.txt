@@ -65,6 +65,9 @@ Absolutely! Please create a pull request on [GitHub here.](https://github.com/En
 
 == Changelog ==
 
+= 1.0.7 =
+* Bug fix: errors when show on frontpage is checked
+
 = 1.0.6 =
 * Support added for custom post types
 
@@ -93,6 +96,9 @@ Absolutely! Please create a pull request on [GitHub here.](https://github.com/En
 * Initial release
 
 == Upgrade Notice ==
+
+= 1.0.7 =
+* Bug fix: errors when show on frontpage is checked
 
 = 1.0.6 =
 * Support added for custom post types
