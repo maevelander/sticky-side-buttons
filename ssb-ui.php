@@ -368,7 +368,7 @@ class ssb_ui {
                                                name="ssb_showoncpt[]"
                                                id="show-on-<?php echo $cpt->name; ?>"
                                                value="<?php echo $cpt->name; ?>"
-											<?php echo ( in_array( $cpt->name, $this->showoncpt ) ) ? ' checked="checked"' : ''; ?>>
+											<?php echo ( $this->showoncpt && in_array( $cpt->name, $this->showoncpt ) ) ? ' checked="checked"' : ''; ?>>
 										<?php _e( $cpt->labels->name, 'sticky-side-buttons' ); ?>
                                     </label>
                                 </p>
