@@ -428,7 +428,7 @@ class ssb_ui {
                             <li id="ssb-btn-<?php echo $btn_id; ?>">
                                 <p>
                                     <a href="<?php echo $this->buttons['btns'][ $btn_id ]['btn_link']; ?>" <?php echo ( !empty($this->buttons['btns'][ $btn_id ]['open_new_window']) ) ? 'target="_blank"' : ''; ?>><?php
-										echo ( isset( $this->buttons['btns'][ $btn_id ]['btn_icon'] ) && $this->buttons['btns'][ $btn_id ]['btn_icon'] ) ? '<span class="fa ' . $this->buttons['btns'][ $btn_id ]['btn_icon'] . '"></span> ' : '';
+										echo ( isset( $this->buttons['btns'][ $btn_id ]['btn_icon'] ) && $this->buttons['btns'][ $btn_id ]['btn_icon'] ) ? '<span class="fab ' . $this->buttons['btns'][ $btn_id ]['btn_icon'] . '"></span> ' : '';
 										echo ( isset( $this->buttons['btns'][ $btn_id ]['btn_text'] ) && ( isset( $this->settings['btn_anim'] ) && $this->settings['btn_anim'] != 'icons' ) ) ? __( $this->buttons['btns'][ $btn_id ]['btn_text'], 'sticky-side-buttons' ) : ' &nbsp; ';
 										?></a>
                                 </p>
@@ -441,20 +441,18 @@ class ssb_ui {
 							?>
                             <li class="ssb-share-btn">
                                 <p>
-                                    <a href="#"><span
-                                                class="fa fa-share-alt ssb-share-icon"></span> <?php echo ( isset( $this->settings['btn_anim'] ) && $this->settings['btn_anim'] != 'icons' ) ? 'Social Share ' : ' &nbsp;&nbsp; '; ?>
+                                    <a href="#"><span class="fas fa-share-alt"></span> <?php echo ( isset( $this->settings['btn_anim'] ) && $this->settings['btn_anim'] != 'icons' ) ? 'Social Share ' : ' &nbsp;&nbsp; '; ?>
                                     </a>
                                 </p>
                                 <div class="ssb-social-popup">
                                     <a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink() ?>"
-                                       onclick="window.open(this.href, 'facebook', 'left=60,top=40,width=500,height=500,toolbar=1,resizable=0'); return false;"><span
-                                                class="fa fa-facebook-official"></span> Facebook</a>
+                                       onclick="window.open(this.href, 'facebook', 'left=60,top=40,width=500,height=500,toolbar=1,resizable=0'); return false;"><span class="fab fa-facebook-f"></span> Facebook</a>
                                     <a href="https://twitter.com/home?status=<?php the_permalink(); ?>"
                                        onclick="window.open(this.href, 'twitter', 'left=60,top=40,width=500,height=500,toolbar=1,resizable=0'); return false;"><span
-                                                class="fa fa-twitter"></span> Twitter</a>
+                                                class="fab fa-twitter"></span> Twitter</a>
                                     <a href="https://plus.google.com/share?url=<?php the_permalink(); ?>"
                                        onclick="window.open(this.href, 'google', 'left=60,top=40,width=500,height=500,toolbar=1,resizable=0'); return false;"><span
-                                                class="fa fa-google-plus"></span> Google+</a>
+                                                class="fab fa-google-plus"></span> Google+</a>
                                 </div>
                             </li>
 							<?php
