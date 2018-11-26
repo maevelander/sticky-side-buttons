@@ -44,7 +44,8 @@ class ssb_main {
 
 		add_action( 'wp_enqueue_scripts', array( $this, 'ssb_ui_assets' ) );
 
-		$this->ssb_icons_migration();
+		// Migration
+        add_action('init', array($this, 'ssb_icons_migration'));
 
 
 	}
