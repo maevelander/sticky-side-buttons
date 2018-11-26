@@ -18,6 +18,9 @@ class ssb_main {
 	 */
 	public function __construct() {
 
+		// Migration
+		add_action('init', array($this, 'ssb_icons_migration'));
+
 		// User interfaces object
 		$this->ui = new ssb_ui;
 
@@ -44,8 +47,6 @@ class ssb_main {
 
 		add_action( 'wp_enqueue_scripts', array( $this, 'ssb_ui_assets' ) );
 
-		// Migration
-        add_action('init', array($this, 'ssb_icons_migration'));
 
 
 	}
