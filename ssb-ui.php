@@ -89,6 +89,7 @@ class ssb_ui {
 
 						// Buttons loop + ordering
 						foreach ( $this->btns_order AS $btn_key => $btn_id ) {
+
 							?>
                             <li id="ssb_btn_<?php echo $btn_id; ?>">
                                 <header>

@@ -44,6 +44,8 @@ class ssb_main {
 
 		add_action( 'wp_enqueue_scripts', array( $this, 'ssb_ui_assets' ) );
 
+		$this->ssb_icons_migration();
+
 
 	}
 
@@ -197,6 +199,33 @@ class ssb_main {
 			'z_index' => intval( $btn_z_index )
 		));
 	}
+
+
+	/**
+     * Icons migration to newer version 
+     * 
+     * @since 1.0.8
+     */
+	public function ssb_icons_migration() {
+
+	    // Get old buttons
+	    $buttons = get_option('ssb_buttons');
+
+	    // Count them
+	    $btns_count = count($buttons['btns']);
+
+	    // Replace them
+	    for ($i = 0; $i < $btns_count; $i++) {
+	        if (strpos($buttons['btns'][$i]['btn_icon'], 'fas') === false && strpos($buttons['btns'][$i]['btn_icon'], 'far') === false) {
+		        $buttons['btns'][$i]['btn_icon'] = 'fas ' .$buttons['btns'][$i]['btn_icon'];
+            }
+        }
+
+        // Update buttons
+		update_option('ssb_buttons', $buttons);
+
+
+    }
 
 
 }
