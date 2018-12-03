@@ -218,7 +218,7 @@ class ssb_main {
 
 	    // Replace them
 	    for ($i = 0; $i < $btns_count; $i++) {
-	        if (strpos($buttons['btns'][$i]['btn_icon'], 'fas') === false && strpos($buttons['btns'][$i]['btn_icon'], 'far') === false) {
+	        if (strpos($buttons['btns'][$i]['btn_icon'], 'fas') === false && strpos($buttons['btns'][$i]['btn_icon'], 'far') === false && strpos($buttons['btns'][$i]['btn_icon'], 'fab') === false) {
 		        $buttons['btns'][$i]['btn_icon'] = 'fas ' .$buttons['btns'][$i]['btn_icon'];
             }
         }
