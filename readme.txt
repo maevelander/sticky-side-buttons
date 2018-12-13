@@ -3,7 +3,7 @@ Contributors: EnigmaWeb
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CEJ9HFWJ94BG4
 Tags: sticky, buttons, contact, side, social buttons, email button, phone button, floating
 Requires at least: 2.7
-Tested up to: 5.0
+Tested up to: 5.0.1
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -42,7 +42,7 @@ This simple button creator lets you create one or more floating buttons that sti
 
 = My sticky side buttons are covered by some other element. What should I do? =
 
-In the plugin settings there is a field where you can define z-index for the buttons. An element with a higher z-index is always in front of an element with a lower z-index.
+In the plugin settings there is a field where you can define z-index for the buttons. An element with a higher z-index is always in front of an element with a lower z-index. If you have tried a high z-index in that setting but your buttons still aren't showing, it is likely that your theme has a very high z-index specified somewhere. This is not great practise, but is sometimes done in complex themes with lots of layered design elements, and also with page builders. As a last resort you can use CSS to force override the z-index for your buttons: `#ssb-container { z-index: 9999 !important; }`
 
 = Where can I get support for this plugin? =
 
@@ -64,6 +64,9 @@ Absolutely! Please create a pull request on [GitHub here.](https://github.com/En
 
 
 == Changelog ==
+
+= 1.0.8 =
+* Upgrade to FontAwesome 5
 
 = 1.0.7 =
 * Bug fix: errors when show on frontpage is checked
@@ -96,6 +99,9 @@ Absolutely! Please create a pull request on [GitHub here.](https://github.com/En
 * Initial release
 
 == Upgrade Notice ==
+
+= 1.0.8 =
+* Upgrade to FontAwesome 5
 
 = 1.0.7 =
 * Bug fix: errors when show on frontpage is checked
