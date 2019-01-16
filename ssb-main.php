@@ -21,11 +21,8 @@ class ssb_main {
 		// Migration
 		add_action('init', array($this, 'ssb_icons_migration'));
 
-		// User interfaces object
-		$this->ui = new ssb_ui;
-
-		// Pull stored data
-		$this->settings = get_option( 'ssb_settings' );
+		// Initialize plugin
+		add_action( 'init', array( $this, 'ssb_init' ) );
 
 		// Plugin text domain
 		add_action( 'init', array( $this, 'ssb_textdomain' ) );
@@ -41,9 +38,6 @@ class ssb_main {
 
 		// Admin notices
 		add_action( 'admin_notices', array( $this, 'ssb_admin_notices' ) );
-
-		// Icons UI
-		add_action( 'wp_footer', array( $this->ui, 'icons' ) );
 
 		add_action( 'wp_enqueue_scripts', array( $this, 'ssb_ui_assets' ) );
 
@@ -61,6 +55,24 @@ class ssb_main {
 	public function ssb_textdomain() {
 
 		load_plugin_textdomain( 'sticky-side-buttons', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+
+	}
+
+
+	/**
+	 * Initialize settings and ui
+	 *
+	 */
+	public function ssb_init() {
+
+		// User interfaces object
+		$this->ui = new ssb_ui;
+
+		// Pull stored data
+		$this->settings = get_option( 'ssb_settings' );
+
+		// Icons UI
+		add_action( 'wp_footer', array( $this, 'icons' ) );
 
 	}
 
