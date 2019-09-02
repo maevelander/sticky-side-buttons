@@ -1,0 +1,12 @@
+<wpml-config>
+    <admin-texts>
+        <key name="ssb_buttons">
+                    <key name="btns">
+                        <key name="*">
+                            <key name="btn_text" />
+                            <key name="btn_link" />
+                        </key>
+                    </key>
+        </key>
+    </admin-texts>
+</wpml-config>
