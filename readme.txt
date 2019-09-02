@@ -3,7 +3,7 @@ Contributors: EnigmaWeb
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CEJ9HFWJ94BG4
 Tags: sticky, buttons, contact, side, social buttons, email button, phone button, floating
 Requires at least: 2.7
-Tested up to: 5.0.1
+Tested up to: 5.2.2
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -65,6 +65,9 @@ Absolutely! Please create a pull request on [GitHub here.](https://github.com/En
 
 == Changelog ==
 
+= 1.0.9 =
+* Removes Google+ share button
+
 = 1.0.8 =
 * Upgrade to FontAwesome 5
 
@@ -84,7 +87,6 @@ Absolutely! Please create a pull request on [GitHub here.](https://github.com/En
 * Adds support for translation plugins: WPML, Polylang
 * Improved button hover handling on mobile
 
-
 = 1.0.3 =
 * Fixes z-index override issue
 
@@ -99,6 +101,9 @@ Absolutely! Please create a pull request on [GitHub here.](https://github.com/En
 * Initial release
 
 == Upgrade Notice ==
+
+= 1.0.9 =
+* Removes Google+ share button
 
 = 1.0.8 =
 * Upgrade to FontAwesome 5
