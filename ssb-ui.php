@@ -451,9 +451,6 @@ class ssb_ui {
                                     <a href="https://twitter.com/home?status=<?php the_permalink(); ?>"
                                        onclick="window.open(this.href, 'twitter', 'left=60,top=40,width=500,height=500,toolbar=1,resizable=0'); return false;"><span
                                                 class="fab fa-twitter"></span> Twitter</a>
-                                    <a href="https://plus.google.com/share?url=<?php the_permalink(); ?>"
-                                       onclick="window.open(this.href, 'google', 'left=60,top=40,width=500,height=500,toolbar=1,resizable=0'); return false;"><span
-                                                class="fab fa-google-plus"></span> Google+</a>
                                 </div>
                             </li>
 							<?php
