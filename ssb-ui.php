@@ -425,12 +425,15 @@ class ssb_ui {
 						<?php
 						// Buttons loop + ordering
 						foreach ( $this->btns_order AS $btn_key => $btn_id ) {
+							$btn = $this->buttons['btns'][ $btn_id ];
+							$btn = apply_filters("sticky_side_buttons_button", $btn_id, $this->buttons['btns'][ $btn_id ]);
+							
 							?>
                             <li id="ssb-btn-<?php echo $btn_id; ?>">
                                 <p>
-                                    <a href="<?php echo $this->buttons['btns'][ $btn_id ]['btn_link']; ?>" <?php echo ( !empty($this->buttons['btns'][ $btn_id ]['open_new_window']) ) ? 'target="_blank"' : ''; ?>><?php
-										echo ( isset( $this->buttons['btns'][ $btn_id ]['btn_icon'] ) && $this->buttons['btns'][ $btn_id ]['btn_icon'] ) ? '<span class="' . $this->buttons['btns'][ $btn_id ]['btn_icon'] . '"></span> ' : '';
-										echo ( isset( $this->buttons['btns'][ $btn_id ]['btn_text'] ) && ( isset( $this->settings['btn_anim'] ) && $this->settings['btn_anim'] != 'icons' ) ) ? __( $this->buttons['btns'][ $btn_id ]['btn_text'], 'sticky-side-buttons' ) : ' &nbsp; ';
+                                    <a href="<?php echo $btn['btn_link']; ?>" <?php echo ( !empty($btn['open_new_window']) ) ? 'target="_blank"' : ''; ?>><?php
+										echo ( isset( $btn['btn_icon'] ) && $btn['btn_icon'] ) ? '<span class="' . $btn['btn_icon'] . '"></span> ' : '';
+										echo ( isset( $btn['btn_text'] ) && ( isset( $this->settings['btn_anim'] ) && $this->settings['btn_anim'] != 'icons' ) ) ? __( $btn['btn_text'], 'sticky-side-buttons' ) : ' &nbsp; ';
 										?></a>
                                 </p>
                             </li>
