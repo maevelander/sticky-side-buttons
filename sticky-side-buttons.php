@@ -1,15 +1,25 @@
 <?php
 /*
 Plugin Name: Sticky Side Buttons
-Version: 1.0.9
+Version: 2.0.0
 Plugin URI: https://wordpress.org/plugins/sticky-side-buttons/
 Description: Flexible button creator allowing you to stick floating buttons to the side of your site.
 Author: Maeve Lander
 Author URI: https://profiles.wordpress.org/enigmaweb/
 Text Domain: sticky-side-buttons
 Domain Path: /languages
-License: GPL v3
+License: GPL v3 or later
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
+Requires at least: 5.0
+Tested up to: 6.4
+Requires PHP: 7.4
+Network: false
 */
+
+// Prevent direct access
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 /**
  * Required plugin files
@@ -53,6 +63,12 @@ register_activation_hook( __FILE__, 'ssb_activate' );
 
 
 /**
- * SSB Instance
+ * Initialize the plugin
+ *
+ * @since 1.0
  */
-$ssb = new ssb_main;
+function ssb_init() {
+	global $ssb;
+	$ssb = new ssb_main();
+}
+add_action( 'plugins_loaded', 'ssb_init' );

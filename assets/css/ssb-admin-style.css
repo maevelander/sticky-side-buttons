@@ -114,3 +114,58 @@
     display: block;
     padding: 0 0 0 3px;
 }
+
+/* Admin Accessibility Improvements */
+.description {
+    color: #666;
+    font-style: italic;
+    font-size: 13px;
+    margin-top: 5px;
+    display: block;
+}
+
+/* Focus indicators for admin interface */
+#ssb-wrap input:focus,
+#ssb-wrap button:focus,
+#ssb-wrap .button:focus {
+    outline: 2px solid #0073aa;
+    outline-offset: 1px;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.8);
+}
+
+/* Accordion header keyboard navigation */
+#ssb-sortable-buttons li header:focus {
+    outline: 2px solid #0073aa;
+    outline-offset: 2px;
+    background: rgba(0, 115, 170, 0.1);
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    #ssb-wrap input:focus,
+    #ssb-wrap button:focus,
+    #ssb-wrap .button:focus,
+    #ssb-sortable-buttons li header:focus {
+        outline: 3px solid;
+        outline-offset: 2px;
+    }
+}
+
+/* Skip link for screen readers */
+.ssb-skip-link {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.ssb-skip-link:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    background: #0073aa;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+}

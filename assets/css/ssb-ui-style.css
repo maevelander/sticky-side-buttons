@@ -119,3 +119,52 @@
         display: none;
     }
 }
+
+/* Accessibility Improvements */
+.ssb-sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+/* Focus indicators for keyboard navigation */
+#ssb-container a:focus {
+    outline: 2px solid #0073aa;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.8);
+}
+
+/* Enhanced focus for high contrast mode */
+@media (prefers-contrast: high) {
+    #ssb-container a:focus {
+        outline: 3px solid;
+        outline-offset: 3px;
+    }
+}
+
+/* Social popup keyboard navigation */
+#ssb-container .ssb-social-popup:focus-within {
+    display: block;
+}
+
+#ssb-container .ssb-social-popup a:focus {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    #ssb-container.ssb-anim-icons ul li {
+        transition: none;
+    }
+    
+    #ssb-container.ssb-anim-icons.ssb-btns-right ul li:hover,
+    #ssb-container.ssb-anim-icons.ssb-btns-left ul li:hover {
+        transform: none;
+    }
+}
