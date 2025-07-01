@@ -5,7 +5,7 @@ Tags: sticky, buttons, contact, side, social buttons, email button, phone button
 Requires at least: 5.0
 Tested up to: 6.8.1
 Requires PHP: 7.4
-Stable tag: 2.0.1
+Stable tag: 2.0.2
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -66,7 +66,7 @@ Absolutely! Please create a pull request on [GitHub here.](https://github.com/ma
 
 == Changelog ==
 
-= 2.0.1 =
+= 2.0.2 =
 * Fixed slide animation positioning issue where button text was not fully visible on hover
 * Added CSS minimum width constraint for slide animation containers to accommodate longer button text
 * Improved button text display consistency across different text lengths
@@ -121,7 +121,7 @@ Absolutely! Please create a pull request on [GitHub here.](https://github.com/ma
 
 == Upgrade Notice ==
 
-= 2.0.1 =
+= 2.0.2 =
 * Bug fix for slide animation positioning. Button text now displays fully when buttons slide out on hover.
 
 = 2.0.0 =
