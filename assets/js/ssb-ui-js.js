@@ -3,19 +3,23 @@ jQuery(function ($) {
 
     // Animation Slide
     var ssb_panel = $('#ssb-container'),
-        ssb_panel_w = ssb_panel.width(),
         sbb_display_margin = 50,
         window_width = jQuery(window).width();
+
+    // Function to get current panel width
+    function getPanelWidth() {
+        return ssb_panel.outerWidth();
+    }
 
     ssb_panel.css('z-index', ssb_ui_data.z_index);
 
     if (ssb_panel.hasClass('ssb-btns-left') && (ssb_panel.hasClass('ssb-anim-slide') || ssb_panel.hasClass('ssb-anim-icons'))) {
 
-        ssb_panel.css('left', '-' + (ssb_panel_w - sbb_display_margin) + 'px');
+        ssb_panel.css('left', '-' + (getPanelWidth() - sbb_display_margin) + 'px');
 
     } else if (ssb_panel.hasClass('ssb-btns-right') && (ssb_panel.hasClass('ssb-anim-slide') || ssb_panel.hasClass('ssb-anim-icons'))) {
 
-        ssb_panel.css('right', '-' + (ssb_panel_w - sbb_display_margin) + 'px');
+        ssb_panel.css('right', '-' + (getPanelWidth() - sbb_display_margin) + 'px');
 
     }
 
@@ -37,11 +41,11 @@ jQuery(function ($) {
 
             if (ssb_panel.hasClass('ssb-btns-left') && ssb_panel.hasClass('ssb-anim-slide')) {
 
-                ssb_panel.animate({'left': '-' + (ssb_panel_w - sbb_display_margin) + 'px'}, 300);
+                ssb_panel.animate({'left': '-' + (getPanelWidth() - sbb_display_margin) + 'px'}, 300);
 
             } else if (ssb_panel.hasClass('ssb-btns-right') && ssb_panel.hasClass('ssb-anim-slide')) {
 
-                ssb_panel.animate({'right': '-' + (ssb_panel_w - sbb_display_margin) + 'px'}, 300);
+                ssb_panel.animate({'right': '-' + (getPanelWidth() - sbb_display_margin) + 'px'}, 300);
 
             }
 
@@ -54,11 +58,11 @@ jQuery(function ($) {
                 jQuery(this).removeClass('ssb-open');
                 if (ssb_panel.hasClass('ssb-btns-left') && ssb_panel.hasClass('ssb-anim-slide')) {
 
-                    ssb_panel.animate({'left': '-' + (ssb_panel_w - sbb_display_margin) + 'px'}, 300);
+                    ssb_panel.animate({'left': '-' + (getPanelWidth() - sbb_display_margin) + 'px'}, 300);
 
                 } else if (ssb_panel.hasClass('ssb-btns-right') && ssb_panel.hasClass('ssb-anim-slide')) {
 
-                    ssb_panel.animate({'right': '-' + (ssb_panel_w - sbb_display_margin) + 'px'}, 300);
+                    ssb_panel.animate({'right': '-' + (getPanelWidth() - sbb_display_margin) + 'px'}, 300);
 
                 }
             } else {

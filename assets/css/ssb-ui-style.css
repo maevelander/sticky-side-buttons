@@ -5,6 +5,11 @@
 	z-index: 1;
 }
 
+/* Force minimum width for slide animation to accommodate text */
+#ssb-container.ssb-anim-slide {
+    min-width: 200px;
+}
+
 .ssb-btns-right {
     right: 0;
 }
