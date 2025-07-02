@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Sticky Side Buttons
-Version: 2.0.2
+Version: 2.0.3
 Plugin URI: https://wordpress.org/plugins/sticky-side-buttons/
 Description: Flexible button creator allowing you to stick floating buttons to the side of your site.
 Author: Maeve Lander
